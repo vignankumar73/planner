@@ -1,0 +1,58 @@
+.sidenavbar{
+    height: 100%;
+    /* width: 0; */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    
+    padding-top: 40px;
+    transition: width 2s linear 1s;
+    
+}
+
+.sidenav {
+	
+}
+.menu-button:hover {
+	opacity: 0.6;
+}
+.menu-button:active {
+	
+	outline: 0px;
+}
+
+
+
+
+.sidenav-list-item{
+    display: block;
+    color: #fff;
+}
+.sidenav-list-item:hover{
+    text-decoration: none;
+    
+}
+.fa-sliders-h{
+    font-size: x-large;
+    position: absolute;
+    left: 8px;
+    top: 18px;
+}
+
+.fa-times{
+    color: #fff;
+    font-size: large;
+
+   
+}
+.close-btn{
+    text-align: right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+

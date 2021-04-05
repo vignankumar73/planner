@@ -1,0 +1,19 @@
+{
+  "Buckets": [
+    {
+      "title": "t1",
+      "description": "d1",
+      "id": 1
+    }
+  ],
+  "Column": [
+    {
+      "Name": "Todo",
+      "id": 1
+    },
+    {
+      "Name": "g",
+      "id": 2
+    }
+  ]
+}

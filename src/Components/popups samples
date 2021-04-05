@@ -1,0 +1,38 @@
+<Popup trigger={<button className="button"> Open Modal </button>} modal>
+    <span> 
+        <div className="container" >
+        <form>
+      
+      <p>Enter your name:</p>
+      <input
+        type='text'
+       
+      />
+      <input type='submit' value='submit'  onClick={this.myChangeHandler}  />
+      </form>
+        </div>
+    </span>
+  </Popup>
+
+                
+
+              {/* <Popup trigger={<button className="button"> <i class="fas fa-plus"></i> </button>} modal>
+    <span > <div>
+                         <form>
+                            <textarea style={ {width:'100%'} }  placeholder="add Note" ></textarea> <br/>
+                            <input type="Submit"/>
+
+                         </form> 
+                     </div> </span>
+  </Popup> */}
+
+
+              {/* <Popup className="popus" trigger={<button> <i class="fas fa-plus"></i></button>} position="bottom left">
+                     <div>
+                         <form>
+                            <textarea  placeholder="add Note" ></textarea>
+                            <input type="Submit"/>
+
+                         </form>
+                     </div>
+                         </Popup> */}

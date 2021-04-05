@@ -1,0 +1,80 @@
+import React, { useState , useEffect } from 'react'
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
+
+
+
+const TaskAdd=(props)=> {
+
+   const [Task,setTask]=useState({
+            title:'',
+            description:'',           
+        });
+
+
+const history=useHistory();
+
+//Object_destructing
+const { title,description }=Task
+
+
+//get all formControls values using name and value and asisgn to state using spread Operator...
+const HandleFormControlsData=(e)=>
+{
+    setTask({ ...Task, [e.target.name]: e.target.value });             
+}
+
+
+//Submit_method
+async function HandleSubmitForm(e) {
+        e.preventDefault();
+        await axios
+            .post("http://localhost:3001/Buckets", Task)
+            .then(() => history.push('/'));
+    }
+
+
+ return (<>
+            <div className="container p-5">
+                        
+                    <form >
+        
+                            <div className="form-group">
+                                <label>Title</label>
+                                <input 
+                                type="text" 
+                                name="title"
+                                className="form-control" 
+                                value={title}
+                                onChange={ HandleFormControlsData.bind(this) }
+                                 />
+                            </div>
+        
+                            <div className="form-group">
+                                <label>Description</label>
+                                <textarea 
+                                type="text" 
+                                name="description"
+                                className="form-control" 
+                                value={description}
+                                onChange={ HandleFormControlsData.bind(this) }
+                                ></textarea>
+                            </div>   
+                           
+                    
+                            <button 
+                            type="Button" 
+                            className="btn btn-primary" onClick={ HandleSubmitForm.bind(this) } >Submit</button>
+                             
+                            
+                           
+                           
+        
+                    </form>
+        
+            </div>
+                </>)
+
+}
+
+export default TaskAdd
